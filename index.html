@@ -7,7 +7,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="img/favicon-32.png">
     <link rel="stylesheet" href="css/style.css">
-    <title>gllacy</title>
+    <title>Техномарт</title>
   </head>
   <body class="page">
     <header class="header">
@@ -26,7 +26,45 @@
       </div>
       <div class="header__user">
         <div class="container header__container">
-
+          <a href="#" class="header__logo logo">
+            <img src="img/icon/logo.svg" alt="Техномарт." width="220" height="50">
+          </a>
+          <form action="https://echo.htmlacademy.ru" method="GET" class="header__form">
+            <input type="search" id="search" class="header__input" name="search" placeholder="Поиск по сайту" required>
+            <label for="search" class="header__label">
+              Поиск:
+            </label>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 9.84871 15.3729 11.551 14.3199 12.9056L19.7071 18.2929L18.2929 19.7071L12.9056 14.3199C11.551 15.3729 9.84871 16 8 16ZM14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z" fill="white"/>
+            </svg>
+            <button type="submit" class="visually-hidden">
+              Отправить.
+            </button>
+          </form>
+          <div class="user">
+            <ul class="user__list">
+              <li class="user__item">
+                <a href="#" class="user__link">
+                  Войти
+                </a>
+              </li>
+            </ul>
+            <!-- Чтобы показать авторизированного пользователя нужно перенести класс user__list--hidden на другой список. -->
+            <ul class="user__list user__list--hidden">
+              <li class="user__item">
+                <a href="#" class="user__link">
+                  Равшан Джамшутович
+                </a>
+              </li>
+              <li class="user__item">
+                <a href="#" class="user__link">
+                  <span class="visually-hidden">
+                    Выход.
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="header__nav">
