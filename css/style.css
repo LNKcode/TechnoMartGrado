@@ -1,0 +1,135 @@
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/pt-sans/ptsans-bold.woff2") format("woff2"), url("../fonts/pt-sans/ptsans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/pt-sans/ptsans-italic.woff2") format("woff2"), url("../fonts/pt-sans/ptsans-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/pt-sans/ptsans-regular.woff2") format("woff2"), url("../fonts/pt-sans/ptsans-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Fira Sans";
+  src: url("../fonts/fira-sans/firasans-bold.woff2") format("woff2"), url("../fonts/fira-sans/firasans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-black: #000000;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-black);
+  margin: 0;
+  min-width: 1240px;
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 1240px;
+  margin: 0 auto;
+  padding: 0 35px;
+}
+
+.header__contacts {
+  background: #F3F7F9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__title {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #EE3643;
+  margin: 0;
+  margin-left: 2px;
+}
+
+.header__address {
+  font-size: 14px;
+  line-height: 18px;
+  color: #32425C;
+  margin: 0;
+  margin-left: auto;
+}
+
+.header__phone {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #293449;
+  background-image: url("../img/icon/phone.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 24px;
+  margin-left: 34px;
+  margin-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.header__phone:hover {
+  opacity: 0.6;
+}
+
+.header__phone:active {
+  opacity: 0.3;
+}
