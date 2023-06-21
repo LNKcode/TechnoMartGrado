@@ -262,7 +262,6 @@ body {
 
 .user__item {
   margin-left: 12px;
-  position: relative;
 }
 
 .user__list {
@@ -270,6 +269,7 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
+  position: relative;
 }
 
 .user__list--hidden {
@@ -361,7 +361,7 @@ body {
 .btn-green {
   display: inline-block;
   text-decoration: none;
-  background: #63A63E;
+  background-color: #63A63E;
   border-radius: 4px;
   color: #ffffff;
   font-weight: 700;
@@ -370,14 +370,16 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 12px 12px;
+  border: none;
+  font-family: inherit;
 }
 
 .btn-green:hover {
-  background: #5FBB2D;
+  background-color: #5FBB2D;
 }
 
 .btn-green:active {
-  background: #518534;
+  background-color: #518534;
 }
 
 .nav__btn {
@@ -412,9 +414,13 @@ body {
   padding-right: 29px;
   padding-bottom: 35px;
   padding-left: 26px;
-  right: 0;
-  top: 0;
+  right: 3px;
+  top: 3px;
   z-index: 2;
+}
+
+.popover--close {
+  display: none;
 }
 
 .popover__close {
@@ -442,12 +448,13 @@ body {
 
 .popover__title {
   margin-top: 0;
-  margin-bottom: 43px;
+  margin-bottom: 46px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
   color: #000000;
+  padding-left: 5px;
 }
 
 .popover__input {
@@ -463,8 +470,51 @@ body {
   color: #000000;
 }
 
+.popover__input:hover {
+  border-color: #63A63E;
+}
+
+.popover__input:focus {
+  border-color: #63A63E;
+  box-shadow: 0 0 0 1px #FFBF47;
+  outline: none;
+}
+
+.popover__input::placeholder {
+  color: #CCCCCC;
+  opacity: 1;
+}
+
+.popover__input:disabled {
+  background-color: rgba(241, 245, 247, 0.5);
+  border-color: #C5C5C5;
+  color: #808080;
+}
+
+/* Класс для ошибки */
+.popover__input--error {
+  border-color: #EE3643;
+}
+
+.popover__input--error:hover {
+  border-color: #EE3643;
+  box-shadow: 0 0 0 1px #EE3643;
+}
+
+/* пояснение ошибки */
+.popover__error-text {
+  display: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #BA2732;
+}
+
+.popover__input--error + .popover__error-text {
+  display: block;
+}
 
 .popover__checkbox-label {
+  display: block;
   font-size: 14px;
   line-height: 18px;
   color: #000000;
@@ -484,6 +534,7 @@ body {
 }
 
 .popover__checkbox-label::before {
+  display: none;
   content: "";
   position: absolute;
   top: 5px;
@@ -495,9 +546,123 @@ body {
   transform: rotate(45deg);
 }
 
+.popover__checkbox-label:hover::before, .popover__checkbox-label:hover::after {
+  opacity: 0.6;
+}
+
 .popover__link {
   font-size: 14px;
   line-height: 18px;
   color: #000000;
   text-decoration: none;
+}
+
+
+.popover__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 5px;
+  margin-top: 13px;
+  margin-bottom: 40px;
+}
+
+.popover__checkbox {
+  margin-right: 25px;
+}
+
+.popover__submit {
+  background-image: url("../img/icon/login.svg");
+  background-repeat: no-repeat;
+  padding-left: 45px;
+  padding-right: 26px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  width: 145px;
+  background-position: left 25px center;
+}
+
+.btn-white {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #32425C;
+  border: 2px solid #63A63E;
+  border-radius: 2px;
+  text-decoration: none;
+  padding: 9px 7px;
+  text-align: center;
+  font-family: inherit;
+  width: 145px;
+}
+
+.btn-white:hover {
+  border-color: #3D546F;
+}
+
+.btn-white:active {
+  border-color: #C5C5C5;
+  color: #C5C5C5;
+}
+
+.popover__field {
+  padding-left: 5px;
+  margin-bottom: 7px;
+}
+
+.popover__register {
+  width: 145px;
+}
+
+.popover__input-checkbox:checked + .popover__checkbox-label::before {
+  display: block;
+}
+
+.popover__input-checkbox:disabled + .popover__checkbox-label {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.popover__input-checkbox:disabled + .popover__checkbox-label::before,
+.popover__input-checkbox:disabled + .popover__checkbox-label::after {
+  opacity: 0.2;
+}
+
+.popover__user-link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3D546F;
+}
+
+.popover__user-link:hover {
+  opacity: 0.6;
+}
+
+.popover__user-link:active {
+  opacity: 0.3;
+}
+
+.popover__user-list {
+  list-style: none;
+  padding-left: 5px;
+  margin: 0;
+}
+
+.popover--user .popover__title {
+  margin-bottom: 30px;
+}
+
+.popover__user-item {
+  margin-bottom: 18px;
+}
+
+.popover__log-out {
+  margin-left: 5px;
+  margin-top: 4px;
 }

@@ -68,10 +68,13 @@
                         Логин.
                       </label>
                       <input type="password" id="password" name="password" placeholder="Пароль" class="popover__input" required>
+                      <span class="popover__error-text">
+                        Всем привет, я ошибка.
+                      </span>
                     </div>
                     <div class="popover__wrapper">
                       <div class="popover__checkbox">
-                        <input type="checkbox" name="remember" id="remember" class="visually-hidden">
+                        <input type="checkbox" name="remember" id="remember" class="visually-hidden popover__input-checkbox" checked>
                         <label for="remember" class="popover__checkbox-label">
                           Запомнить меня
                         </label>
@@ -98,6 +101,31 @@
                 <a href="#" class="user__link user__link--name">
                   Равшан Джамшутович
                 </a>
+                <div class="popover popover--user popover--close">
+                  <button type="button" class="popover__close">
+                    <span class="visually-hidden">
+                      Закрыть.
+                    </span>
+                  </button>
+                  <h2 class="popover__title">
+                    Здравствуйте, <br>Равшан Джамшутович
+                  </h2>
+                  <ul class="popover__user-list">
+                    <li class="popover__user-item">
+                      <a href="#" class="popover__user-link">
+                        мои заказы
+                      </a>
+                    </li>
+                    <li class="popover__user-item">
+                      <a href="#" class="popover__user-link">
+                        личный кабинет
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="#" class="btn-white popover__log-out">
+                    выйти
+                  </a>
+                </div>
               </li>
               <li class="user__item">
                 <a href="#" class="user__link user__link--log-out">
@@ -178,7 +206,19 @@
       </nav>
     </header>
     <main class="main">
-
+      <section class="nav-catalog container">
+        <h2 class="visually-hidden">
+          Навигация по каталогу.
+        </h2>
+        <div class="nav-catalog__item nav-catalog__item--yellow nav-catalog__item--paint">
+          <h3 class="nav-catalog__title">
+            Материалы
+          </h3>
+          <a href="#" class="nav-catalog__btn">
+            на любой вкус
+          </a>
+        </div>
+      </section>
     </main>
     <footer class="footer">
 
