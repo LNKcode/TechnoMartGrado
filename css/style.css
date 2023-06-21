@@ -178,6 +178,7 @@ body {
   position: absolute;
   top: 11px;
   left: 53px;
+  cursor: text;
 }
 
 .header__form {
@@ -190,6 +191,7 @@ body {
   top: 12px;
   left: 21px;
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .header__input:focus {
@@ -229,6 +231,14 @@ body {
   background-position: left center;
 }
 
+.user__link:hover {
+  opacity: 0.6;
+}
+
+.user__link:active {
+  opacity: 0.3;
+}
+
 .user__link--name {
   font-weight: 400;
   font-size: 16px;
@@ -252,6 +262,7 @@ body {
 
 .user__item {
   margin-left: 12px;
+  position: relative;
 }
 
 .user__list {
@@ -274,13 +285,219 @@ body {
   display: flex;
   margin: 0;
   padding-left: 0;
-}
-
-.nav__item {
-  margin-right: 45px;
+  flex-wrap: wrap;
+  margin-left: -19px;
 }
 
 .nav__link {
   text-decoration: none;
   color: #ffffff;
+  display: inline-block;
+  padding: 19px 23px 27px 23px;
+}
+
+.nav__link:hover {
+  background: #32425C;
+  color: #C5C5C5;
+}
+
+.nav__link:active {
+  background: #32425C;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.nav__link-icon {
+  text-decoration: none;
+  display: block;
+  height: 24px;
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+.nav__link-icon:hover {
+  opacity: 0.6;
+}
+
+.nav__link-icon:active {
+  opacity: 0.3;
+}
+
+.nav__link-icon::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav__link-icon--bookmark::after {
+  background-image: url("../img/icon/bookmark.svg");
+}
+
+.nav__link-icon--cart::after {
+  background-image: url("../img/icon/cart.svg");
+}
+
+.nav__list-icon {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  margin-left: auto;
+}
+
+.btn-green {
+  display: inline-block;
+  text-decoration: none;
+  background: #63A63E;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 12px;
+}
+
+.btn-green:hover {
+  background: #5FBB2D;
+}
+
+.btn-green:active {
+  background: #518534;
+}
+
+.nav__btn {
+  margin-bottom: 6px;
+  margin-right: 3px;
+}
+
+.nav__item-icon {
+  margin-right: 23px;
+}
+
+
+.nav__number {
+  display: inline-block;
+  min-width: 18px;
+  padding-right: 1px;
+  padding-left: 4px;
+}
+
+/* состояние закладки и корзины когда там ничего нет */
+.nav__number--hidden {
+  display: none;
+}
+
+.popover {
+  position: absolute;
+  width: 360px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding-top: 22px;
+  padding-right: 29px;
+  padding-bottom: 35px;
+  padding-left: 26px;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.popover__close {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-image: url("../img/icon/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  cursor: pointer;
+}
+
+.popover__close:hover {
+  opacity: 0.6;
+}
+
+.popover__close:active {
+  opacity: 0.3;
+}
+
+.popover__title {
+  margin-top: 0;
+  margin-bottom: 43px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.popover__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #C5C5C5;
+  border-radius: 2px;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+
+.popover__checkbox-label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  padding-left: 38px;
+  position: relative;
+}
+
+.popover__checkbox-label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 2px solid #3D546F;
+}
+
+.popover__checkbox-label::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 5px;
+  height: 8px;
+  border-right: 2px solid #3D546F;
+  border-bottom: 2px solid #3D546F;
+  transform: rotate(45deg);
+}
+
+.popover__link {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
 }

@@ -47,6 +47,49 @@
                 <a href="#" class="user__link user__link--log-in">
                   Войти
                 </a>
+                <div class="user__popover popover popover--close">
+                  <button type="button" class="popover__close">
+                    <span class="visually-hidden">
+                      Закрыть.
+                    </span>
+                  </button>
+                  <h2 class="popover__title">
+                    Личный кабинет
+                  </h2>
+                  <form action="https://echo.htmlacademy.ru" method="POST" class="popover__form">
+                    <div class="popover__field">
+                      <label for="login" class="visually-hidden">
+                        Логин.
+                      </label>
+                      <input type="text" id="login" name="login" placeholder="Логин" class="popover__input" required>
+                    </div>
+                    <div class="popover__field">
+                      <label for="password" class="visually-hidden">
+                        Логин.
+                      </label>
+                      <input type="password" id="password" name="password" placeholder="Пароль" class="popover__input" required>
+                    </div>
+                    <div class="popover__wrapper">
+                      <div class="popover__checkbox">
+                        <input type="checkbox" name="remember" id="remember" class="visually-hidden">
+                        <label for="remember" class="popover__checkbox-label">
+                          Запомнить меня
+                        </label>
+                      </div>
+                      <a href="#" class="popover__link">
+                        Забыл пароль
+                      </a>
+                    </div>
+                    <div class="popover__footer">
+                      <button class="popover__submit btn-green" type="submit">
+                        Войти
+                      </button>
+                      <a href="#" class="popover__register btn-white">
+                        Регистрация
+                      </a>
+                    </div>
+                  </form>
+                </div>
               </li>
             </ul>
             <!-- Чтобы показать авторизированного пользователя нужно перенести класс user__list--hidden на другой список. -->
@@ -108,16 +151,22 @@
           </ul>
           <ul class="nav__list-icon">
             <li class="nav__item-icon">
-              <a href="#" class="nav__link-icon">
+              <a href="#" class="nav__link-icon nav__link-icon--bookmark">
                 <span class="visually-hidden">
                   Закладки.
+                </span>
+                <span class="nav__number nav__number--hidden">
+                  12
                 </span>
               </a>
             </li>
             <li class="nav__item-icon">
-              <a href="#" class="nav__link-icon">
+              <a href="#" class="nav__link-icon nav__link-icon--cart">
                 <span class="visually-hidden">
                   Корзина.
+                </span>
+                <span class="nav__number nav__number--hidden">
+                  3
                 </span>
               </a>
             </li>
