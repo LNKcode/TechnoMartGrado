@@ -927,10 +927,23 @@ body {
   text-transform: uppercase;
   color: #293449;
   width: 100%;
+  margin-bottom: 26px;
 }
 
 .form-filter {
   width: 220px;
+}
+
+.form-filter__fieldset-wrapper {
+  margin-bottom: 41px;
+}
+
+.form-filter__fieldset-wrapper--radio {
+  padding-left: 5px;
+}
+
+.form-filter__fieldset-wrapper--radio .form-filter__list {
+  margin-top: 19px;
 }
 
 .form-filter__legend {
@@ -939,6 +952,11 @@ body {
   line-height: 24px;
   color: #000000;
   text-transform: uppercase;
+  padding-left: 0;
+}
+
+.form-filter__range {
+  margin-top: 8px;
 }
 
 .form-filter__fieldset {
@@ -1037,7 +1055,7 @@ body {
   font-size: 14px;
   line-height: 18px;
   color: #000000;
-  padding-left: 38px;
+  padding-left: 36px;
   position: relative;
   cursor: pointer;
 }
@@ -1047,8 +1065,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   border-radius: 2px;
   border: 2px solid #3D546F;
 }
@@ -1086,10 +1104,16 @@ body {
 .form-filter__list {
   padding-left: 0;
   list-style: none;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .form-filter__item {
-  margin-bottom: 19px;
+  margin-bottom: 22px;
+}
+
+.form-filter__item:last-child {
+  margin-bottom: 6px;
 }
 
 .form-filter__label--radio::before {
@@ -1124,6 +1148,7 @@ body {
 }
 
 .form-filter__btn {
+  font-family: inherit;
   display: block;
   font-weight: 700;
   font-size: 14px;
@@ -1131,7 +1156,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #32425C;
-  padding: 12px;
+  padding: 11px 12px 9px 12px;
   background-color: #FFFFFF;
   border: 2px solid #3D546F;
   border-radius: 2px;
@@ -1151,6 +1176,7 @@ body {
 .catalog__container {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 20px;
 }
 
 .catalog__form {
@@ -1160,6 +1186,7 @@ body {
 .catalog__main {
   flex-grow: 1;
   margin-left: 74px;
+  padding-top: 32px;
 }
 
 .catalog__select {
@@ -1183,12 +1210,15 @@ body {
 .catalog__sort {
   position: relative;
   width: 280px;
+  padding-left: 5px;
+  margin-bottom: 32px;
 }
 
 .catalog__sort svg {
   position: absolute;
-  right: 12px;
-  top: 16px;
+  right: 7px;
+  top: 17px;
+  pointer-events: none;
 }
 
 .catalog__select:hover {
@@ -1215,9 +1245,12 @@ body {
 }
 
 .product {
+  display: flex;
+  flex-direction: column;
   width: 270px;
   padding: 27px;
   padding-bottom: 23px;
+  height: 100%;
 }
 
 .product__title {
@@ -1225,8 +1258,8 @@ body {
   line-height: 26px;
   color: #293449;
   text-align: center;
-  margin-top: 14px;
-  margin-bottom: 11px;
+  margin-top: 7px;
+  margin-bottom: 14px;
 }
 
 .product__old-price {
@@ -1238,6 +1271,8 @@ body {
   text-decoration-line: line-through;
   text-transform: uppercase;
   color: #A9A9A9;
+  margin-bottom: 13px;
+  margin-top: 0;
 }
 
 .product__btn-price {
@@ -1255,6 +1290,9 @@ body {
   min-width: 120px;
   border-radius: 4px;
   position: relative;
+  margin-right: 17px;
+  margin-top: auto;
+
 }
 
 .product__btn-price::before {
@@ -1313,7 +1351,8 @@ body {
   bottom: 0;
   right: 0;
   text-align: center;
-  padding-top: 27px;
+  padding-top: 34px;
+  padding-right: 5px;
   display: none;
 }
 
@@ -1322,7 +1361,11 @@ body {
 }
 
 .product__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  flex-grow: 1;
 }
 
 .pagination__list {
@@ -1355,9 +1398,28 @@ body {
   color: #3D546F;
 }
 
-.catalog__pagination {
+.pagination__link:hover {
+  opacity: 0.6;
+}
+
+.pagination__link:active {
+  opacity: 0.3;
+}
+
+.pagination__link--active:hover,
+.pagination__link--active:active {
+  opacity: 1;
+}
+
+.pagination {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+.catalog__pagination {
+  margin-top: 31px;
 }
 
 .pagination__btn {
